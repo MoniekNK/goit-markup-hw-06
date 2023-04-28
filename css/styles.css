@@ -765,6 +765,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-left: 12px;
+  padding: 10px 24px 10px 42px;
 }
 
 .newsletter-box-form-button svg {
