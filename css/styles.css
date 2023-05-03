@@ -835,3 +835,48 @@ input {
   pointer-events: none;
   transform: rotate(100deg);
 }
+/*modal*/
+
+.modal-header {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 40px;
+  margin-bottom: 12px;
+  color: var(--text-primary-color);
+}
+
+.modal-form {
+}
+.modal-input {
+  position: relative;
+}
+modal-input svg {
+  position: absolute;
+  left: 55px;
+  top: 27px;
+  fill: var(--text-primary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input input:focus {
+  border-color: var(--object-primary-background-color);
+}
+.modal-input input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 42px;
+  outline: none;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input input:focus + svg {
+  fill: var(--object-primary-background-color);
+}

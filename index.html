@@ -510,13 +510,13 @@
         <button type="button" class="close-btn" data-modal-close>X</button>
 
         <h3 class="modal-header">Zostaw swoje dane w formularzu poniżej</h3>
-        <form class="modal form" autocomplete="off">
+        <form class="modal form">
           <div class="modal-input">
             <label class="modal-label">
               Imię
               <input type="text" name="modal_username" />
               <svg width="20" height="20">
-                <use href=".images/icon.svg"></use>
+                <use href="./images/icon.svg#icon-person"></use>
               </svg>
             </label>
 
@@ -526,6 +526,16 @@
                 <input type="tel" name="modal_telephone" />
                 <svg width="20" height="20">
                   <use href="./images/icon.svg#icon-phone"></use>
+                </svg>
+              </label>
+            </div>
+
+            <div class="modal-input">
+              <label class="modal-label">
+                Email
+                <input type="email" name="modal_email" />
+                <svg width="20" height="20">
+                  <use href="./images/icon.svg#icon-email"></use>
                 </svg>
               </label>
             </div>
