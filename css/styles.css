@@ -710,6 +710,7 @@ body {
 }
 
 .footer-form-top {
+  display: flex;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
@@ -763,6 +764,9 @@ body {
 .newsletter-btn svg {
   fill: var(--parrent-color);
   margin-left: 24px;
+}
+form {
+  display: flex;
 }
 
 /*MODAL WINDOW*/
