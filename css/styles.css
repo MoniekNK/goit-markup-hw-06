@@ -706,7 +706,7 @@ body {
 /*newsletter*/
 
 .newsletter-container {
-  margin-left: 70px;
+  margin-left: auto;
 }
 
 .footer-form-top {
