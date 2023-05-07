@@ -967,6 +967,9 @@ label {
   letter-spacing: 0.03em;
   margin-left: 7px;
 }
+
+.modal-check {
+}
 [type="checkbox"] + .modal-form-label-checkbox::before {
   content: "";
   position: absolute;
