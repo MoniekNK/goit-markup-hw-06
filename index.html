@@ -526,60 +526,71 @@
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
 
-        <h3 class="modal-header">Zostaw swoje dane w formularzu poniżej</h3>
-        <form>
-          <div class="modal-input">
-            <label class="modal-label">
-              Imię
-              <input type="text" name="modal_username" />
-              <svg width="20" height="20">
-                <use href="./images/icon.svg#icon-person"></use>
-              </svg>
-            </label>
+        <form class="modal-form-top">
+          <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
 
-            <div class="modal-input">
-              <label class="modal-label">
-                Telefon
-                <input type="tel" name="modal_telephone" />
-                <svg width="20" height="20">
-                  <use href="./images/icon.svg#icon-phone"></use>
-                </svg>
-              </label>
-            </div>
+          <label class="form-label">
+            <span class="modal-label">Imię</span>
+            <svg width="20" height="20" class="modal-text">
+              <use href="./images/icon.svg#icon-person"></use>
+            </svg>
+            <input
+              type="text"
+              name="username"
+              class="modal-icon"
+              minlength="3"
+              required
+            />
+          </label>
 
-            <div class="modal-input">
-              <label class="modal-label">
-                Email
-                <input type="email" name="modal_email" />
-                <svg width="20" height="20">
-                  <use href="./images/icon.svg#icon-email"></use>
-                </svg>
-              </label>
-            </div>
-            <label class="modal-form-text">
-              Komentarz
-              <textarea
-                name="modal-comment"
-                rows="5"
-                placeholder="Wprowadź tekst"
-              ></textarea>
-            </label>
+          <label class="form-label">
+            <span class="modal-label">Telefon</span>
+            <svg width="20" height="20" class="modal-text">
+              <use href="./images/icon.svg#icon-phone"></use>
+            </svg>
+            <input type="tel" name="phone-number" class="modal-icon" required />
+          </label>
 
-            <p class="modal-form-checkbox">
-              <input
-                class="modal-checkbox-input"
-                type="checkbox"
-                id="accept"
-                name="statute"
-              />
+          <label class="form-label">
+            <span class="modal-label">Email</span>
+            <svg width="20" height="20" class="modal-text">
+              <use href="./images/icon.svg#icon-email"></use>
+            </svg>
+            <input
+              type="email"
+              name="modal_email"
+              class="modal-icon"
+              required
+            />
+          </label>
 
-              <label class="modal-checkbox" for="checkbox">
-                Oświadczam iż akceptuję <a href="#">Regulamin</a> i
-                <a href="#">Politykę Prywatności</a></label
-              >
-            </p>
-            <button class="modal-form-btn" type="submit">Wyślij</button>
-          </div>
+          <label class="form-label">
+            <span class="modal-label">Komentarz</span>
+            <textarea
+              name="modal-comment"
+              rows="5"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+          </label>
+
+ <label class="modal-checkbox" for="checkbox">
+  <span class="checkbox-text">
+    Oświadczam, że akceptuję
+    <a href="#" class="modal-link"> Regulamin </a> i
+    <a href="#" class="modal-link"> Politykę Prywatności.</a>
+  </span>
+
+
+          <p class="modal-form-checkbox">
+            <input
+              class="modal-checkbox-input"
+              type="checkbox"
+              id="accept"
+              name="statute"
+            />
+
+           
+          <button class="modal-form-btn" type="submit">Wyślij</button>
         </form>
       </div>
     </div>

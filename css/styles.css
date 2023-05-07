@@ -835,22 +835,50 @@ form {
 }
 /*modal*/
 
-.modal-header {
-  color: var(--text-primary-color);
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.15px;
-  letter-spacing: 0.03em;
-  margin-bottom: 30px;
-}
-.modal {
+.modal-form-top {
+  display: block;
   padding: 40px;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
+.modal-header {
+  color: var(--text-primary-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary-color);
+}
+.modal-text {
+  color: var(--text-secondary-color);
+  position: absolute;
+  display: block;
+  top: 55%;
+  left: 15px;
+}
+
+.modal-icon {
+  width: 100%;
+  height: 40px;
+  border: solid 1px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-top: 4px;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .modal-form-text textarea {
@@ -887,11 +915,6 @@ label {
   opacity: 0;
 }
 
-.modal-input {
-  position: relative;
-  display: block;
-  margin-bottom: 10px;
-}
 .modal-input svg {
   position: absolute;
   left: 15px;
@@ -913,13 +936,6 @@ input {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-label {
-  color: var(--text-secondary-color);
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
 }
 
 .modal-form-text {
@@ -956,13 +972,12 @@ input {
 .modal-checkbox {
   color: var(--text-secondary-color);
   position: relative;
-  display: inline-block;
   cursor: pointer;
-  font-size: 14px;
+  display: flex;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-left: 7px;
-  margin-top: 20px;
+  font-size: 14px;
+  align-items: baseline;
 }
 
 [type="checkbox"] + .modal-checkbox::before {
@@ -988,7 +1003,7 @@ input {
   height: 15px;
   left: -20px;
   top: 4px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Crect width='16' height='15' fill='%232196F3' rx='2'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
+  background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'width='13'height='10'fill='none'><pathfill='#fff'stroke='#fff'stroke-width='.2'd='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
   background-size: contain;
   transform: scale(1.05);
   opacity: 1;
@@ -1006,45 +1021,6 @@ input {
   background-size: contain;
   transform: scale(0);
   opacity: 0;
-}
-
-.modal-check {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  width: 0;
-  height: 0;
-}
-
-.modal-icon {
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  top: 0;
-  margin-left: 15px;
-}
-
-.modal-check:checked ~ .modal-tick-box {
-  display: none;
-}
-.modal-check:checked ~ .modal-tick {
-  background-color: var(--backdrop-background-color);
-  visibility: visible;
-}
-
-.modal-tick {
-  position: absolute;
-  border-radius: 2px;
-  margin-left: 15px;
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  cursor: pointer;
-  border: 1px solid;
 }
 
 .modal-form-btn {
