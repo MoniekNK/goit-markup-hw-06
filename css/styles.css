@@ -988,7 +988,7 @@ input {
   height: 15px;
   left: -20px;
   top: 4px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Crect width='16' height='15' fill='%232196F3' rx='2'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
+  background-image: url(./images/check-icon.svg;<svgxmlns="http://www.w3.org/2000/svg"width="13"height="10"fill="none"><pathfill="#fff"stroke="#fff"stroke-width=".2"d="m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z"/></svg>);
   background-size: contain;
   transform: scale(1.05);
   opacity: 1;
@@ -1002,7 +1002,7 @@ input {
   height: 15px;
   left: -20px;
   top: 4px;
-  background-image: url("data:images/<svg+xmlns="http://www.w3.org/2000/svg" width="13" height="10" fill="none"><path fill="#fff" stroke="#fff" stroke-width=".2" d="m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z"/></svg>
+  background-image: url(./images/check-icon.svg;<svgxmlns="http://www.w3.org/2000/svg"width="13"height="10"fill="none"><pathfill="#fff"stroke="#fff"stroke-width=".2"d="m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z"/></svg>);
   background-size: contain;
   transform: scale(0);
   opacity: 0;
