@@ -884,12 +884,13 @@ label {
 
 .modal-input {
   position: relative;
+  display: block;
+  margin-bottom: 10px;
 }
 .modal-input svg {
   position: absolute;
   left: 15px;
   top: 27px;
-
   fill: var(--text-primary-color);
   transition-property: fill;
   transition-duration: 250ms;
@@ -898,30 +899,21 @@ label {
 .modal-input input:focus {
   border-color: var(--object-primary-background-color);
 }
-.modal-input input {
+input {
   width: 448px;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-top: 4px;
   outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input input:focus + svg {
-  fill: var(--object-primary-background-color);
-}
-
 .modal-label {
   color: var(--text-secondary-color);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 
