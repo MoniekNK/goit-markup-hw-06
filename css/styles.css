@@ -969,7 +969,25 @@ label {
 }
 
 .modal-check {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
 }
+
+.modal-icon {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  top: 0;
+  margin-left: 15px;
+}
+
 [type="checkbox"] + .modal-form-label-checkbox::before {
   content: "";
   position: absolute;
