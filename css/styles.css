@@ -447,7 +447,6 @@ body {
   justify-content: center;
   align-items: center;
   column-gap: 30px;
-  padding: 0 15px;
 }
 
 .our-customers-list {
@@ -598,10 +597,11 @@ body {
   column-gap: 8px;
   padding-left: 0;
   margin-bottom: 50px;
-  transition-property: fill, background-color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .container-button:hover,
 .container-button:focus {
   background-color: var(--object-primary-background-color);
@@ -621,6 +621,9 @@ body {
   cursor: pointer;
   letter-spacing: 0.06em;
   padding: 6px 22px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*OFFER*/
@@ -772,6 +775,8 @@ form {
 
 .backdrop {
   position: fixed;
+  visibility: visible;
+  opacity: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -780,8 +785,6 @@ form {
   transition-property: opacity, transform, visibility;
   transition-duration: 250ms;
   z-index: 100;
-  visibility: visible;
-  opacity: 1;
 }
 
 .modal {
@@ -791,21 +794,18 @@ form {
   left: 50%;
   width: 528px;
   height: 581px;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
-.modal-icon {
-  position: relative;
 }
 
 .close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -824,8 +824,8 @@ form {
 
 .is-hidden {
   visibility: hidden;
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
   transform: rotate(100deg);
 }
 /*modal*/
@@ -837,16 +837,15 @@ form {
   font-weight: 700;
   line-height: 1.15px;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+.modal {
+  padding: 40px;
 }
 
 label {
   display: flex;
   flex-direction: column;
-}
-
-.modal-form {
-  padding: 40px;
 }
 
 .modal-form-text textarea {
@@ -888,8 +887,9 @@ label {
 }
 .modal-input svg {
   position: absolute;
-  left: 55px;
+  left: 15px;
   top: 27px;
+
   fill: var(--text-primary-color);
   transition-property: fill;
   transition-duration: 250ms;
@@ -904,7 +904,6 @@ label {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-top: 4px;
-
   outline: none;
   transition-property: border-color;
   transition-duration: 250ms;
@@ -919,7 +918,6 @@ label {
   color: var(--text-secondary-color);
   display: flex;
   flex-direction: column;
-
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
@@ -931,7 +929,6 @@ label {
   color: var(--text-secondary-color);
   display: flex;
   flex-direction: column;
-
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
@@ -952,7 +949,7 @@ label {
 .modal-form-checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
+
   margin-top: 20px;
 }
 
@@ -968,20 +965,32 @@ label {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-left: 7px;
+}
+[type="checkbox"] + .modal-form-label-checkbox::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: -20px;
+  top: 4px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Cpath fill='%23212121' d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modal-form-btn {
   color: var(--text-tertiary-color);
-  width: 200px;
-  height: 50px;
   background: var(--object-primary-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: none;
-  cursor: pointer;
   display: block;
+  width: 200px;
+  height: 50px;
+  border: none;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
