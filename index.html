@@ -522,6 +522,8 @@
       </div>
     </footer>
 
+    <!--modal-->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
@@ -573,24 +575,22 @@
             ></textarea>
           </label>
 
- <label class="modal-checkbox" for="checkbox">
-  <span class="checkbox-text">
-    Oświadczam, że akceptuję
-    <a href="#" class="modal-link"> Regulamin </a> i
-    <a href="#" class="modal-link"> Politykę Prywatności.</a>
-  </span>
+          <label class="modal-checkbox" for="checkbox">
+            <span class="checkbox-text">
+              Oświadczam, że akceptuję
+              <a href="#" class="modal-link"> Regulamin </a> i
+              <a href="#" class="modal-link"> Politykę Prywatności.</a>
+            </span>
 
-
-          <p class="modal-form-checkbox">
             <input
-              class="modal-checkbox-input"
               type="checkbox"
+              value="terms"
+              class="modal-checkbox-input"
               id="accept"
-              name="statute"
             />
-
-            <div class="modal-button-section">
-          <button class="modal-form-btn" type="submit">Wyślij</button>
+          </label>
+          <div class="modal-button-section">
+            <button class="modal-form-btn" type="submit">Wyślij</button>
           </div>
         </form>
       </div>

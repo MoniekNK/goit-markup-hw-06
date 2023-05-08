@@ -639,9 +639,6 @@ body {
   gap: 30px;
 }
 
-.project-photo {
-}
-
 .project-photo:hover,
 .project-photo:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -838,6 +835,7 @@ form {
 .modal-form-top {
   display: block;
   padding: 40px;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-header {
@@ -854,31 +852,18 @@ form {
   position: relative;
   margin-bottom: 10px;
 }
-.modal-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--text-secondary-color);
-}
-.modal-text {
-  color: var(--text-secondary-color);
-  position: absolute;
-  display: block;
-  top: 55%;
-  left: 15px;
-}
 
 .modal-icon {
-  width: 100%;
-  height: 40px;
-  border: solid 1px;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-top: 4px;
-  padding-left: 42px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+}
+
+.modal-icon svg {
+  position: absolute;
+  left: 15px;
+  top: 27px;
+  fill: var(--text-primary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label textarea {
@@ -898,35 +883,42 @@ form {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-form textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-.modal-form textarea:focus {
-  border-color: var(--object-primary-background-color);
-}
-.modal-form-checkbox-paragraph {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-.modal-form-checkbox-input {
-  opacity: 0;
-}
-
-.modal-input svg {
-  position: absolute;
-  left: 15px;
-  top: 27px;
-  fill: var(--text-primary-color);
-  transition-property: fill;
+.modal-link {
+  text-decoration: underline;
+  color: var(--object-primary-background-color);
+  transition-property: transform, font-weight;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input input:focus {
-  border-color: var(--object-primary-background-color);
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary-color);
 }
+.modal-text {
+  color: var(--text-secondary-color);
+  position: absolute;
+  display: block;
+  top: 55%;
+  left: 15px;
+}
+
+.modal-link:hover,
+.modal-link:focus {
+  transform: scale(1.03);
+  font-weight: 400;
+}
+
+.modal-checkbox-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
 input {
   width: 448px;
   height: 40px;
@@ -938,16 +930,6 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-text {
-  color: var(--text-secondary-color);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-}
 .modal-form-text-checkbox {
   color: var(--text-secondary-color);
   font-size: 14px;
@@ -959,84 +941,21 @@ input {
   cursor: pointer;
 }
 
-.modal-form-checkbox {
-  display: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.modal-checkbox-input {
-  opacity: 0;
-}
-
-.modal-checkbox {
-  color: var(--text-secondary-color);
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  align-items: baseline;
-}
-
-[type="checkbox"] + .modal-checkbox::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  left: -20px;
-  top: 4px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Cpath fill='%23212121' d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-[type="checkbox"]:focus + .modal-checkbox::before {
-  outline: 4px;
-  outline-color: var(--object-primary-background-color);
-}
-[type="checkbox"]:checked + .modal-checkbox::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  left: -20px;
-  top: 4px;
-  background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'width='13'height='10'fill='none'><pathfill='#fff'stroke='#fff'stroke-width='.2'd='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
-  background-size: contain;
-  transform: scale(1.05);
-  opacity: 1;
-  transition-property: transform, opacity;
-  transition-duration: 0.3s;
-}
-[type="checkbox"]:not(:checked) + .modal-checkbox::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  left: -20px;
-  top: 4px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Crect width='16' height='15' fill='%232196F3' rx='2'/%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
-  background-size: contain;
-  transform: scale(0);
-  opacity: 0;
-}
-
 .modal-form-btn {
   color: var(--text-tertiary-color);
   background: var(--object-primary-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 10px 76px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.06em;
-  border: none;
+  width: 200px;
+  height: 50px;
   border-radius: 4px;
-  position: relative;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  letter-spacing: 0.06em;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
