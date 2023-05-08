@@ -825,10 +825,10 @@ form {
 }
 
 .is-hidden {
+  transform: rotate(100deg);
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transform: rotate(100deg);
 }
 /*modal*/
 
@@ -844,7 +844,8 @@ form {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
 
 .form-label {
@@ -870,6 +871,31 @@ form {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-label input:focus {
+  border-color: var(--object-primary-background-color);
+}
+
+.form-label svg {
+  position: absolute;
+  left: 15px;
+  top: 27px;
+  fill: var(--text-primary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-label input:focus + svg {
+  fill: var(--object-primary-background-color);
+}
+
+.form-label textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-label textarea:focus {
+  border-color: var(--object-primary-background-color);
+}
+
 .modal-link {
   text-decoration: underline;
   color: var(--object-primary-background-color);
@@ -888,8 +914,11 @@ form {
   color: var(--text-secondary-color);
   position: absolute;
   display: block;
-  top: 55%;
+  top: 15%;
   left: 15px;
+}
+
+.modal-icon {
 }
 
 .modal-link:hover,
@@ -898,12 +927,23 @@ form {
   font-weight: 400;
 }
 
+.modal-checkbox {
+  opacity: 0;
+}
 .modal-checkbox-input {
   width: 0;
   height: 0;
   opacity: 0;
   position: absolute;
   cursor: pointer;
+}
+
+.modal-checkbox-input :checked + .modal-check {
+  display: none;
+}
+.modal-checkbox-input :checked + .modal-box {
+  visibility: visible;
+  color: var(--object-primary-background-color);
 }
 
 input {
@@ -915,6 +955,24 @@ input {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  visibility: hidden;
+  border-radius: 2px;
+  top: 0;
+  margin-left: 15px;
+}
+
+.modal-box {
+  position: absolute;
+  border-radius: 2px;
+  margin-left: 15px;
 }
 
 .modal-form-btn {
