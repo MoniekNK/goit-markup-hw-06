@@ -869,6 +869,19 @@ form {
 .form-label input:focus {
   border-color: var(--object-primary-background-color);
 }
+
+.form-label input:focus svg {
+  fill: var(--object-primary-background-color);
+}
+.form-label svg {
+  position: absolute;
+  left: 15px;
+  top: 27px;
+  fill: var(--text-primary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .form-label {
   position: relative;
 }
