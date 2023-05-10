@@ -721,6 +721,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-tertiary-color);
   padding-bottom: 20px;
+  padding-top: 12px;
 }
 
 .footer-top {
